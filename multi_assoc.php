@@ -1,0 +1,34 @@
+<!--
+
+Creating a multidimensional associative array
+
+-->
+
+<?php
+
+  $products =  array(
+           'paper' => array(
+    	           'copier' => "Copier & Multipurpose",
+	               'inkjet' => "Inkjet Printer",
+	               'laser'  => "Laser Printer",
+	               'photo'  => "Photographic Paper"),
+
+            'pen' => array(
+    	           'ball'   => "Ball Point",
+	               'hilite' => "Highlighters",
+	               'marker' => "Marker"),
+
+            'misc' => array(
+    	           'tape'   => "Sticky Tape",
+	               'glue'   => "Adhesives",
+	               'clips'  => "Paperclips") );
+
+ echo "<pre>";
+ foreach ($products as $section => $items)
+ 	 foreach ($items as $key => $value)
+ 	 	echo "$section:\t$key\t($value)<br>";
+ 	 echo "</pre>";
+
+ 	 echo $products['misc']['glue'];
+
+?>
